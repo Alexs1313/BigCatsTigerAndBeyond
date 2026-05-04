@@ -5,73 +5,84 @@ import React, {useEffect} from 'react';
 import {useNavigation} from '@react-navigation/native';
 import WebView from 'react-native-webview';
 
-const biigctsandbyonndloadhtmlloader = `    <!DOCTYPE html>
+const biigctsandbyonndloadhtmlloader = `  <!DOCTYPE html>
     <html>
       <head>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-          body {
+          html, body {
             margin: 0;
             padding: 0;
+            width: 100%;
+            height: 100%;
             background: transparent;
             display: flex;
-            justify-content: center;
             align-items: center;
-            height: 100vh;
+            justify-content: center;
+            overflow: hidden;
           }
 
           .loader {
-            width: 84px;
-            aspect-ratio: 1;
-            background:
-              linear-gradient(#ff4500 0 0) left/50% 100% no-repeat,
-              conic-gradient(
-                from -90deg at 32px 9.47px,
-                #fff8dc 135deg,
-                #8b0000 0 270deg,
-                #ffa500 0
-              );
-            background-blend-mode: multiply;
-            -webkit-mask: linear-gradient(
-                to bottom right,
-                transparent 8px,
-                black 0 52px,
-                transparent 0
-              ),
-              conic-gradient(from -90deg at right 6px bottom 6px, black 90deg, transparent 0);
-            mask: linear-gradient(to bottom right, transparent 8px, black 0 52px, transparent 0),
-              conic-gradient(from -90deg at right 6px bottom 6px, black 90deg, transparent 0);
-            background-size: 50% 50%;
-            -webkit-mask-size: 50% 50%;
-            mask-size: 50% 50%;
-            -webkit-mask-composite: source-in;
-            mask-composite: intersect;
-            animation: l9 1.8s infinite cubic-bezier(0.5, 0.2, 0.5, 1);
-            box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
-            transform: perspective(1000px) rotateY(15deg);
+            width: 64px;
+            height: 64px;
+            position: relative;
+            background: #FFF;
+            border-radius: 4px;
+            overflow: hidden;
           }
 
-          @keyframes l9 {
+          .loader:before {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 40px;
+            height: 40px;
+            transform: rotate(45deg) translate(30%, 40%);
+            background: #ff9371;
+            box-shadow: 32px -34px 0 5px #ff3d00;
+            animation: slide 2s infinite ease-in-out alternate;
+          }
+
+          .loader:after {
+            content: "";
+            position: absolute;
+            left: 10px;
+            top: 10px;
+            width: 16px;
+            height: 16px;
+            border-radius: 50%;
+            background: #ff3d00;
+            transform: rotate(0deg);
+            transform-origin: 35px 145px;
+            animation: rotate 2s infinite ease-in-out;
+          }
+
+          @keyframes slide {
+            0%, 100% {
+              bottom: -35px;
+            }
+
+            25%, 75% {
+              bottom: -2px;
+            }
+
+            20%, 80% {
+              bottom: 2px;
+            }
+          }
+
+          @keyframes rotate {
             0% {
-              background-position: 0% 0%, 0 0;
-              transform: perspective(1000px) rotateY(15deg) scale(1);
-              box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+              transform: rotate(-15deg);
             }
-            25% {
-              background-position: 100% 0%, 0 0;
+
+            25%, 75% {
+              transform: rotate(0deg);
             }
-            50% {
-              background-position: 100% 100%, 0 0;
-              transform: perspective(1000px) rotateY(15deg) scale(1.08);
-              box-shadow: 0 0 25px rgba(255, 69, 0, 0.8);
-            }
-            75% {
-              background-position: 0% 100%, 0 0;
-            }
+
             100% {
-              background-position: 0% 0%, 0 0;
-              transform: perspective(1000px) rotateY(15deg) scale(1);
-              box-shadow: 0 0 15px rgba(255, 69, 0, 0.6);
+              transform: rotate(25deg);
             }
           }
         </style>

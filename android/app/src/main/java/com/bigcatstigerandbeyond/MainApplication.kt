@@ -1,4 +1,4 @@
-package com.bigcatstigerandbeyond
+package com.tiger.big.cats
 
 import android.app.Application
 import com.facebook.react.PackageList

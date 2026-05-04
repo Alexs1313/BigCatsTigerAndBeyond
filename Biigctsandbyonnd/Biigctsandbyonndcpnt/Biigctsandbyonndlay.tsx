@@ -1,5 +1,6 @@
 import React from 'react';
 import {ImageBackground, ScrollView, StyleSheet, View} from 'react-native';
+import LinearGradient from 'react-native-linear-gradient';
 
 const Biigctsandbyonndlay = ({
   children,
@@ -11,8 +12,8 @@ const Biigctsandbyonndlay = ({
   bounce?: boolean;
 }) => {
   return (
-    <ImageBackground
-      source={require('../../assets/i/biigctsandbybg.png')}
+    <LinearGradient
+      colors={['rgba(125, 55, 37, 1)', 'rgb(56, 23, 15)']}
       style={styles.biigctsandbyonndlayBackground}>
       {biigctsandbyonndlayScroll ? (
         <ScrollView
@@ -24,7 +25,7 @@ const Biigctsandbyonndlay = ({
       ) : (
         <View style={styles.biigctsandbyonndlayFill}>{children}</View>
       )}
-    </ImageBackground>
+    </LinearGradient>
   );
 };
 

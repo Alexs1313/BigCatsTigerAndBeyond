@@ -1,4 +1,4 @@
-package com.bigcatstigerandbeyond
+package com.tiger.big.cats
 
 import com.facebook.react.ReactActivity
 import com.facebook.react.ReactActivityDelegate
