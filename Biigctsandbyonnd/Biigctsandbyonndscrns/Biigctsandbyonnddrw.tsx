@@ -8,6 +8,7 @@ import {
   Alert,
   Image,
   Modal,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -426,6 +427,7 @@ const Biigctsandbyonnddrw = () => {
         visible={biigctsandbyonnddrwCompare}
         transparent
         animationType="fade"
+        statusBarTranslucent={Platform.OS === 'android'}
         onRequestClose={() => setBiigctsandbyonnddrwCompare(false)}>
         <View style={styles.biigctsandbyonnddrwModalRoot}>
           <Pressable
