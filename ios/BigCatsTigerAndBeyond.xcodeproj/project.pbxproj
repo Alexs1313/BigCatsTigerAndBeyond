@@ -8,9 +8,17 @@
 
 /* Begin PBXBuildFile section */
 		0C80B921A6F3F58F76C31292 /* libPods-BigCatsTigerAndBeyond.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5DCACB8F33CDC322A6C60F78 /* libPods-BigCatsTigerAndBeyond.a */; };
+		12A06FF3F3734C03BFD63FB4 /* Nunito-Medium.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BCAEF794DE0D472F94E7FE37 /* Nunito-Medium.ttf */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
+		2C162C414EFB44A98F88C0C5 /* Nunito-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 89C01344DE834120AD0823B7 /* Nunito-Regular.ttf */; };
+		3032ACA2CD614734A39342F1 /* Nunito-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = BF723E49ADB34915BB8E2FAD /* Nunito-ExtraBold.ttf */; };
+		3EAB37E9937640C8A4014962 /* Nunito-Black.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 45878EAACA3D48AF94516018 /* Nunito-Black.ttf */; };
 		761780ED2CA45674006654EE /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 761780EC2CA45674006654EE /* AppDelegate.swift */; };
+		76BAFBBB222746778F3D7CFB /* Nunito-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 73615DAD1B0F48B297B76E8D /* Nunito-Bold.ttf */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
+		911D778D83D449D48D3AF36F /* Nunito-BoldItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 69309511BD9C4D4D9AF82B4E /* Nunito-BoldItalic.ttf */; };
+		BA1BA5ADECB748A894E63C11 /* Nunito-SemiBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 903CE7DB54354DA09B106973 /* Nunito-SemiBold.ttf */; };
+		D62331A2BAE54FEA9337FC98 /* Nunito-MediumItalic.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 795F2BF002A64F6F8CE26A4E /* Nunito-MediumItalic.ttf */; };
 		EA2E816AE54A0D6DCDEBCC67 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */; };
 /* End PBXBuildFile section */
 
@@ -20,10 +28,18 @@
 		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = BigCatsTigerAndBeyond/Info.plist; sourceTree = "<group>"; };
 		13B07FB81A68108700A75B9A /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = PrivacyInfo.xcprivacy; path = BigCatsTigerAndBeyond/PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		3B4392A12AC88292D35C810B /* Pods-BigCatsTigerAndBeyond.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigCatsTigerAndBeyond.debug.xcconfig"; path = "Target Support Files/Pods-BigCatsTigerAndBeyond/Pods-BigCatsTigerAndBeyond.debug.xcconfig"; sourceTree = "<group>"; };
+		45878EAACA3D48AF94516018 /* Nunito-Black.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Black.ttf"; path = "../assets/f/Nunito-Black.ttf"; sourceTree = "<group>"; };
 		5709B34CF0A7D63546082F79 /* Pods-BigCatsTigerAndBeyond.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-BigCatsTigerAndBeyond.release.xcconfig"; path = "Target Support Files/Pods-BigCatsTigerAndBeyond/Pods-BigCatsTigerAndBeyond.release.xcconfig"; sourceTree = "<group>"; };
 		5DCACB8F33CDC322A6C60F78 /* libPods-BigCatsTigerAndBeyond.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-BigCatsTigerAndBeyond.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		69309511BD9C4D4D9AF82B4E /* Nunito-BoldItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-BoldItalic.ttf"; path = "../assets/f/Nunito-BoldItalic.ttf"; sourceTree = "<group>"; };
+		73615DAD1B0F48B297B76E8D /* Nunito-Bold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Bold.ttf"; path = "../assets/f/Nunito-Bold.ttf"; sourceTree = "<group>"; };
 		761780EC2CA45674006654EE /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = AppDelegate.swift; path = BigCatsTigerAndBeyond/AppDelegate.swift; sourceTree = "<group>"; };
+		795F2BF002A64F6F8CE26A4E /* Nunito-MediumItalic.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-MediumItalic.ttf"; path = "../assets/f/Nunito-MediumItalic.ttf"; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = BigCatsTigerAndBeyond/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C01344DE834120AD0823B7 /* Nunito-Regular.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Regular.ttf"; path = "../assets/f/Nunito-Regular.ttf"; sourceTree = "<group>"; };
+		903CE7DB54354DA09B106973 /* Nunito-SemiBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-SemiBold.ttf"; path = "../assets/f/Nunito-SemiBold.ttf"; sourceTree = "<group>"; };
+		BCAEF794DE0D472F94E7FE37 /* Nunito-Medium.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-Medium.ttf"; path = "../assets/f/Nunito-Medium.ttf"; sourceTree = "<group>"; };
+		BF723E49ADB34915BB8E2FAD /* Nunito-ExtraBold.ttf */ = {isa = PBXFileReference; explicitFileType = undefined; fileEncoding = 9; includeInIndex = 0; lastKnownFileType = unknown; name = "Nunito-ExtraBold.ttf"; path = "../assets/f/Nunito-ExtraBold.ttf"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 /* End PBXFileReference section */
 
@@ -75,6 +91,7 @@
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
+				FD06F72133CC44FC864ED7EA /* Resources */,
 			);
 			indentWidth = 2;
 			sourceTree = "<group>";
@@ -96,6 +113,21 @@
 				5709B34CF0A7D63546082F79 /* Pods-BigCatsTigerAndBeyond.release.xcconfig */,
 			);
 			path = Pods;
+			sourceTree = "<group>";
+		};
+		FD06F72133CC44FC864ED7EA /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				BCAEF794DE0D472F94E7FE37 /* Nunito-Medium.ttf */,
+				BF723E49ADB34915BB8E2FAD /* Nunito-ExtraBold.ttf */,
+				89C01344DE834120AD0823B7 /* Nunito-Regular.ttf */,
+				903CE7DB54354DA09B106973 /* Nunito-SemiBold.ttf */,
+				73615DAD1B0F48B297B76E8D /* Nunito-Bold.ttf */,
+				69309511BD9C4D4D9AF82B4E /* Nunito-BoldItalic.ttf */,
+				45878EAACA3D48AF94516018 /* Nunito-Black.ttf */,
+				795F2BF002A64F6F8CE26A4E /* Nunito-MediumItalic.ttf */,
+			);
+			name = Resources;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -161,6 +193,14 @@
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				EA2E816AE54A0D6DCDEBCC67 /* PrivacyInfo.xcprivacy in Resources */,
+				12A06FF3F3734C03BFD63FB4 /* Nunito-Medium.ttf in Resources */,
+				3032ACA2CD614734A39342F1 /* Nunito-ExtraBold.ttf in Resources */,
+				2C162C414EFB44A98F88C0C5 /* Nunito-Regular.ttf in Resources */,
+				BA1BA5ADECB748A894E63C11 /* Nunito-SemiBold.ttf in Resources */,
+				76BAFBBB222746778F3D7CFB /* Nunito-Bold.ttf in Resources */,
+				911D778D83D449D48D3AF36F /* Nunito-BoldItalic.ttf in Resources */,
+				3EAB37E9937640C8A4014962 /* Nunito-Black.ttf in Resources */,
+				D62331A2BAE54FEA9337FC98 /* Nunito-MediumItalic.ttf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -191,9 +231,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BigCatsTigerAndBeyond/Pods-BigCatsTigerAndBeyond-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BigCatsTigerAndBeyond/Pods-BigCatsTigerAndBeyond-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -230,9 +274,13 @@
 			inputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BigCatsTigerAndBeyond/Pods-BigCatsTigerAndBeyond-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
+			inputPaths = (
+			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
 				"${PODS_ROOT}/Target Support Files/Pods-BigCatsTigerAndBeyond/Pods-BigCatsTigerAndBeyond-resources-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -273,7 +321,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghdjcd.tuuqw;
 				PRODUCT_NAME = BigCatsTigerAndBeyond;
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
@@ -300,7 +348,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "org.reactjs.native.example.$(PRODUCT_NAME:rfc1034identifier)";
+				PRODUCT_BUNDLE_IDENTIFIER = com.ghdjcd.tuuqw;
 				PRODUCT_NAME = BigCatsTigerAndBeyond;
 				SWIFT_VERSION = 5.0;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -376,10 +424,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
@@ -448,10 +493,7 @@
 					"-DFOLLY_CFG_NO_COROUTINES=1",
 					"-DFOLLY_HAVE_CLOCK_GETTIME=1",
 				);
-				OTHER_LDFLAGS = (
-					"$(inherited)",
-					" ",
-				);
+				OTHER_LDFLAGS = "$(inherited)  ";
 				REACT_NATIVE_PATH = "${PODS_ROOT}/../../node_modules/react-native";
 				SDKROOT = iphoneos;
 				USE_HERMES = true;

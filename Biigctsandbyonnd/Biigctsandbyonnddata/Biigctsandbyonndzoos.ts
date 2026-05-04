@@ -1,0 +1,298 @@
+import type {ImageSourcePropType} from 'react-native';
+
+export type BiigctsandbyonndZoo = {
+  id: string;
+  flag: string;
+  country: string;
+  name: string;
+  location: string;
+  latitude: number;
+  longitude: number;
+  description: string;
+  bigCats: string[];
+  openingHours: string;
+  image: ImageSourcePropType | null;
+};
+
+export const biigctsandbyonndZoos: BiigctsandbyonndZoo[] = [
+  {
+    id: 'san_diego_zoo',
+    flag: '🇺🇸',
+    country: 'USA',
+    name: 'San Diego Zoo',
+    location: 'San Diego, USA',
+    latitude: 32.7353,
+    longitude: -117.149,
+    description:
+      'San Diego Zoo is one of the most famous zoological parks in the world, known for its large naturalistic habitats, strong conservation programs, and beautifully designed visitor areas. Located in Balboa Park, it offers a rich wildlife experience where visitors can explore different regions of the animal kingdom through immersive trails, shaded paths, and carefully planned habitats.\n\nFor big cat lovers, San Diego Zoo is a memorable destination because its exhibits are designed to highlight both the beauty and the behavior of wild predators. Visitors can learn about hunting adaptations, camouflage, conservation threats, and the role big cats play in healthy ecosystems. The zoo’s educational atmosphere makes it suitable for families, wildlife fans, students, and anyone who wants to see powerful animals in carefully maintained environments.',
+    bigCats: ['Bengal Tiger', 'Jaguar', 'Leopard', 'Cheetah'],
+    openingHours: '9:00 AM – 9:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo1.png'),
+  },
+  {
+    id: 'bronx_zoo',
+    flag: '🇺🇸',
+    country: 'USA',
+    name: 'Bronx Zoo',
+    location: 'New York City, USA',
+    latitude: 40.8506,
+    longitude: -73.8769,
+    description:
+      'Bronx Zoo is one of the largest urban zoos in the United States, offering a surprisingly wild experience in the heart of New York City. Its spacious grounds include forested paths, themed habitats, educational zones, and conservation-focused exhibits that introduce visitors to animals from many parts of the world.\n\nThe zoo is especially interesting for people who enjoy learning about predators and their environments. Big cat exhibits often highlight how these animals move, hunt, rest, communicate, and survive in the wild. The combination of city location and naturalistic design makes Bronx Zoo feel like a wildlife escape inside a major metropolis.',
+    bigCats: ['Amur Tiger', 'Lion', 'Snow Leopard', 'Leopard'],
+    openingHours: '10:00 AM – 5:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo2.png'),
+  },
+  {
+    id: 'smithsonian_national_zoo',
+    flag: '🇺🇸',
+    country: 'USA',
+    name: 'Smithsonian National Zoo',
+    location: 'Washington, D.C., USA',
+    latitude: 38.9296,
+    longitude: -77.0498,
+    description:
+      'Smithsonian National Zoo is a respected wildlife destination located in Washington, D.C. It combines public education, animal care, and scientific research in a setting that feels both educational and relaxing. Visitors can explore tree-lined paths, animal exhibits, and learning areas focused on biodiversity and conservation.\n\nFor users interested in big cats, this zoo offers a strong learning experience. Exhibits often help explain how large predators depend on healthy habitats, how conservation programs support threatened species, and why human activity has such a strong effect on wild cat populations. It is a great zoo for visitors who want more than a simple walk-through experience.',
+    bigCats: ['Tiger', 'Lion', 'Cheetah', 'Clouded Leopard'],
+    openingHours: '8:00 AM – 4:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo3.png'),
+  },
+  {
+    id: 'london_zoo',
+    flag: '🇬🇧',
+    country: 'United Kingdom',
+    name: 'London Zoo',
+    location: 'London, United Kingdom',
+    latitude: 51.5353,
+    longitude: -0.1534,
+    description:
+      'London Zoo is one of the oldest and most historically important zoos in the world. Located in Regent’s Park, it combines classic zoo heritage with modern conservation education and carefully designed animal habitats. The zoo is compact compared with some large safari parks, but it offers a rich and varied visitor experience.\n\nIts big cat areas are especially appealing for visitors who want to learn about the lives of predators in an accessible city location. The exhibits focus on natural behavior, species protection, and the challenges wild cats face in their native habitats. London Zoo works well as both a tourist attraction and an educational destination for wildlife enthusiasts.',
+    bigCats: ['Asiatic Lion', 'Tiger', 'Leopard', 'Cheetah'],
+    openingHours: '10:00 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo4.png'),
+  },
+  {
+    id: 'chester_zoo',
+    flag: '🇬🇧',
+    country: 'United Kingdom',
+    name: 'Chester Zoo',
+    location: 'Chester, United Kingdom',
+    latitude: 53.2267,
+    longitude: -2.8848,
+    description:
+      'Chester Zoo is one of the most visited and highly regarded zoos in the United Kingdom. It is known for its large grounds, conservation work, immersive habitats, and family-friendly layout. The zoo has a strong reputation for combining animal welfare, education, and enjoyable visitor experiences.\n\nFor big cat fans, Chester Zoo offers a chance to learn about rare and endangered cats in thoughtfully planned habitats. The zoo’s interpretation areas help explain why habitat protection matters and how conservation projects can support animals in the wild. It is a strong choice for visitors who want a full-day wildlife experience with a serious educational side.',
+    bigCats: ['Sumatran Tiger', 'Asiatic Lion', 'Jaguar', 'Cheetah'],
+    openingHours: '10:00 AM – 5:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo5.png'),
+  },
+  {
+    id: 'berlin_zoo',
+    flag: '🇩🇪',
+    country: 'Germany',
+    name: 'Berlin Zoo',
+    location: 'Berlin, Germany',
+    latitude: 52.508,
+    longitude: 13.3379,
+    description:
+      'Berlin Zoo is one of Europe’s most famous zoological gardens, located in the center of Germany’s capital. It is known for its broad animal collection, historic architecture, modern exhibits, and easy access for visitors exploring the city. The zoo offers a balanced mix of classic zoo atmosphere and updated animal care spaces.\n\nBig cat exhibits at Berlin Zoo help visitors appreciate the diversity of wild cats from different continents and climates. From powerful tigers to agile smaller wild cats, the zoo presents predators as important parts of natural ecosystems rather than simple attractions. The central location makes it a convenient and memorable wildlife stop during a Berlin visit.',
+    bigCats: ['Tiger', 'Lion', 'Leopard', 'Jaguar'],
+    openingHours: '9:00 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo6.png'),
+  },
+  {
+    id: 'pairi_daiza',
+    flag: '🇧🇪',
+    country: 'Belgium',
+    name: 'Pairi Daiza',
+    location: 'Brugelette, Belgium',
+    latitude: 50.588,
+    longitude: 3.8877,
+    description:
+      'Pairi Daiza is a beautifully designed wildlife park in Belgium, known for its immersive worlds, detailed landscapes, gardens, temples, bridges, and themed animal areas. It feels more like a large cultural and nature park than a traditional zoo, making the visitor experience visually rich and atmospheric.\n\nFor people interested in big cats, Pairi Daiza offers a dramatic setting where powerful animals can be observed in carefully designed habitats. The park’s style helps visitors feel connected to the regions where these animals naturally live. It is especially suitable for users who enjoy photography, scenic walks, and wildlife discovery in a highly polished environment.',
+    bigCats: ['Tiger', 'Snow Leopard', 'Cheetah', 'Lion'],
+    openingHours: '10:00 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo7.png'),
+  },
+  {
+    id: 'prague_zoo',
+    flag: '🇨🇿',
+    country: 'Czech Republic',
+    name: 'Prague Zoo',
+    location: 'Prague, Czech Republic',
+    latitude: 50.1167,
+    longitude: 14.4114,
+    description:
+      'Prague Zoo is one of Europe’s most respected zoos, set on hilly terrain near the Vltava River. Its landscape gives visitors a varied walking experience with viewpoints, shaded paths, and animal habitats placed across different elevations. The zoo is known for strong conservation programs and a well-organized visitor route.\n\nBig cat exhibits at Prague Zoo are interesting because they connect animal observation with conservation education. Visitors can learn how predators adapt to different habitats, why large territories matter, and how human activity can threaten wild populations. The zoo is a strong destination for travelers who want both a scenic day out and meaningful wildlife learning.',
+    bigCats: ['Tiger', 'Lion', 'Leopard', 'Clouded Leopard'],
+    openingHours: '9:00 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo8.png'),
+  },
+  {
+    id: 'singapore_zoo',
+    flag: '🇸🇬',
+    country: 'Singapore',
+    name: 'Singapore Zoo',
+    location: 'Singapore',
+    latitude: 1.4043,
+    longitude: 103.793,
+    description:
+      'Singapore Zoo is famous for its lush tropical setting, open-concept habitats, and immersive visitor experience. Surrounded by greenery, water features, and carefully planned pathways, it gives visitors a strong sense of being close to nature while still offering a safe and organized zoo environment.\n\nFor big cat enthusiasts, Singapore Zoo is especially appealing because the tropical atmosphere suits many forest-based predators. The exhibits often emphasize natural behavior, conservation, and the importance of protecting rainforest ecosystems. It is an excellent location for wildlife photography, family visits, and educational exploration.',
+    bigCats: ['White Tiger', 'Leopard', 'Cheetah', 'Lion'],
+    openingHours: '8:30 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo9.png'),
+  },
+  {
+    id: 'taronga_zoo_sydney',
+    flag: '🇦🇺',
+    country: 'Australia',
+    name: 'Taronga Zoo Sydney',
+    location: 'Sydney, Australia',
+    latitude: -33.8435,
+    longitude: 151.241,
+    description:
+      'Taronga Zoo Sydney is one of Australia’s most scenic zoos, offering views of Sydney Harbour along with a wide variety of wildlife exhibits. Its hillside layout, open spaces, and strong conservation message make it a memorable destination for both tourists and local visitors.\n\nThe big cat areas help visitors understand the beauty and vulnerability of large predators. Through animal encounters, signage, and habitat design, the zoo connects visitors with the challenges facing species such as tigers and other threatened cats. The combination of wildlife, city views, and conservation education makes Taronga Zoo a standout destination.',
+    bigCats: ['Sumatran Tiger', 'Lion', 'Leopard', 'Snow Leopard'],
+    openingHours: '9:30 AM – 5:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo10.png'),
+  },
+  {
+    id: 'melbourne_zoo',
+    flag: '🇦🇺',
+    country: 'Australia',
+    name: 'Melbourne Zoo',
+    location: 'Melbourne, Australia',
+    latitude: -37.7846,
+    longitude: 144.9516,
+    description:
+      'Melbourne Zoo is a historic and accessible wildlife destination located close to the city center. It combines leafy gardens, animal habitats, educational displays, and conservation messaging in a relaxed visitor-friendly layout. The zoo is suitable for short visits, family days, and deeper wildlife learning.\n\nIts big cat exhibits often focus on the importance of protecting forests, reducing wildlife trade, and supporting conservation partnerships. Visitors can observe the strength, elegance, and quiet behavior of large cats while learning how each species fits into its natural ecosystem. The zoo’s calm design makes it easy to explore at a comfortable pace.',
+    bigCats: ['Sumatran Tiger', 'Lion', 'Snow Leopard', 'Leopard'],
+    openingHours: '9:00 AM – 5:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo11.png'),
+  },
+  {
+    id: 'toronto_zoo',
+    flag: '🇨🇦',
+    country: 'Canada',
+    name: 'Toronto Zoo',
+    location: 'Toronto, Canada',
+    latitude: 43.8177,
+    longitude: -79.1859,
+    description:
+      'Toronto Zoo is one of the largest zoos in Canada, with spacious grounds divided into geographic regions. Visitors can explore habitats inspired by Africa, Asia, the Americas, and other parts of the world. The large layout gives the zoo a park-like feeling, with plenty of room for walking and discovery.\n\nFor big cat fans, Toronto Zoo is a strong place to learn about species from cold forests, tropical regions, and open landscapes. Its exhibits help show how different cats are adapted to different climates, hunting styles, and environments. The zoo is also a useful educational destination for understanding conservation across continents.',
+    bigCats: ['Tiger', 'Lion', 'Snow Leopard', 'Cheetah'],
+    openingHours: '9:30 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo12.png'),
+  },
+  {
+    id: 'zoorasia',
+    flag: '🇯🇵',
+    country: 'Japan',
+    name: 'Yokohama Zoological Gardens Zoorasia',
+    location: 'Yokohama, Japan',
+    latitude: 35.4958,
+    longitude: 139.5267,
+    description:
+      'Zoorasia is a spacious and beautifully planned zoo in Yokohama, designed around ecological zones and naturalistic landscapes. It is known for wide paths, greenery, calm viewing spaces, and a strong focus on presenting animals in environments that feel connected to their native regions.\n\nFor big cat lovers, Zoorasia offers a more peaceful and nature-oriented zoo experience. Visitors can observe rare and powerful cats while moving through thoughtfully arranged habitats. The zoo’s design encourages slow exploration, making it a good choice for users who enjoy detailed observation, photography, and learning about wildlife at a relaxed pace.',
+    bigCats: ['Tiger', 'Lion', 'Clouded Leopard', 'Cheetah'],
+    openingHours: '9:30 AM – 4:30 PM',
+    image: require('../../assets/i/biigctsandbcfzoo13.png'),
+  },
+  {
+    id: 'ueno_zoo',
+    flag: '🇯🇵',
+    country: 'Japan',
+    name: 'Ueno Zoo',
+    location: 'Tokyo, Japan',
+    latitude: 35.7164,
+    longitude: 139.7714,
+    description:
+      'Ueno Zoo is Japan’s oldest zoo and one of Tokyo’s best-known animal attractions. Located inside Ueno Park, it is easy to visit and offers a compact but varied wildlife experience. The zoo combines historical charm, city accessibility, and educational exhibits for visitors of many ages.\n\nAlthough it is located in a dense urban area, Ueno Zoo gives visitors a chance to learn about wild animals from many regions of the world. Its predator exhibits can help users understand the contrast between city life and the natural habitats that big cats need to survive. It is a practical stop for travelers who want a wildlife experience without leaving central Tokyo.',
+    bigCats: ['Tiger', 'Lion', 'Leopard', 'Cougar'],
+    openingHours: '9:30 AM – 5:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo14.png'),
+  },
+  {
+    id: 'dubai_safari_park',
+    flag: '🇦🇪',
+    country: 'United Arab Emirates',
+    name: 'Dubai Safari Park',
+    location: 'Dubai, United Arab Emirates',
+    latitude: 25.1789,
+    longitude: 55.4496,
+    description:
+      'Dubai Safari Park is a modern wildlife destination designed around themed villages, safari-style routes, and spacious animal areas. It presents wildlife in a polished and visitor-friendly setting, combining education, entertainment, and conservation messaging in a warm desert-city environment.\n\nFor users interested in big cats, Dubai Safari Park offers a dramatic way to learn about predators from Africa and Asia. The park’s layout can help visitors compare different habitats, from open savannah-inspired spaces to shaded predator zones. It is a visually strong destination for app content because it blends wildlife, modern design, and travel appeal.',
+    bigCats: ['Lion', 'Tiger', 'Cheetah', 'Leopard'],
+    openingHours: '9:00 AM – 5:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo15.png'),
+  },
+  {
+    id: 'al_ain_zoo',
+    flag: '🇦🇪',
+    country: 'United Arab Emirates',
+    name: 'Al Ain Zoo',
+    location: 'Al Ain, United Arab Emirates',
+    latitude: 24.1796,
+    longitude: 55.7398,
+    description:
+      'Al Ain Zoo is a major wildlife park in the United Arab Emirates, located near desert landscapes and mountain scenery. It is known for spacious habitats, conservation programs, and a strong focus on animals adapted to dry and open environments. The zoo offers a different atmosphere from tropical or forest-based zoos.\n\nBig cat exhibits here are especially interesting because they connect predators with desert, savannah, and dryland ecosystems. Visitors can learn how large cats survive heat, open terrain, and limited cover. The setting makes Al Ain Zoo a strong destination for users who enjoy wildlife parks with a desert character.',
+    bigCats: ['Lion', 'Cheetah', 'Leopard', 'Tiger'],
+    openingHours: '9:00 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo16.png'),
+  },
+  {
+    id: 'beauval_zoo',
+    flag: '🇫🇷',
+    country: 'France',
+    name: 'ZooParc de Beauval',
+    location: 'Saint-Aignan, France',
+    latitude: 47.247,
+    longitude: 1.353,
+    description:
+      'ZooParc de Beauval is one of France’s most famous zoos and one of Europe’s major wildlife attractions. It is known for its extensive animal collection, large landscaped areas, and carefully designed visitor routes. The zoo combines beautiful gardens, immersive exhibits, and strong educational value.\n\nFor big cat enthusiasts, Beauval offers a chance to discover powerful predators in a polished and scenic setting. The zoo’s habitats help visitors understand the differences between forest cats, savannah hunters, and mountain predators. It is also a strong choice for app users who want a zoo destination that feels both educational and visually impressive.',
+    bigCats: ['Tiger', 'Lion', 'Cheetah', 'Snow Leopard'],
+    openingHours: '9:00 AM – 7:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo17.png'),
+  },
+  {
+    id: 'copenhagen_zoo',
+    flag: '🇩🇰',
+    country: 'Denmark',
+    name: 'Copenhagen Zoo',
+    location: 'Copenhagen, Denmark',
+    latitude: 55.6722,
+    longitude: 12.521,
+    description:
+      'Copenhagen Zoo is a well-known Scandinavian zoo located close to the city center. It combines historic architecture, modern animal areas, and educational exhibits in a compact but varied layout. The zoo is easy to explore and offers a calm, organized experience for visitors.\n\nIts big cat exhibits help show how large predators live, move, and interact with their environments. The zoo’s educational approach makes it a good place to understand the needs of animals in human care and the importance of conservation work in the wild. For travelers, it is a convenient wildlife stop within Copenhagen.',
+    bigCats: ['Tiger', 'Lion', 'Leopard', 'Cheetah'],
+    openingHours: '9:00 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo18.png'),
+  },
+  {
+    id: 'rotterdam_zoo',
+    flag: '🇳🇱',
+    country: 'Netherlands',
+    name: 'Rotterdam Zoo',
+    location: 'Rotterdam, Netherlands',
+    latitude: 51.9276,
+    longitude: 4.4494,
+    description:
+      'Rotterdam Zoo, also known as Diergaarde Blijdorp, is one of the Netherlands’ most important zoos. It is known for its themed environments, modern exhibits, and thoughtful visitor flow. The zoo offers a strong combination of architecture, landscape design, animal care, and educational interpretation.\n\nBig cat exhibits at Rotterdam Zoo can give visitors insight into how predators use space, cover, height, and resting areas. The zoo’s design helps frame animals within environments that feel connected to their natural habitats. It is a good destination for users who appreciate both wildlife and well-designed public spaces.',
+    bigCats: ['Tiger', 'Lion', 'Leopard', 'Fishing Cat'],
+    openingHours: '9:00 AM – 6:00 PM',
+    image: require('../../assets/i/biigctsandbcfzoo19.png'),
+  },
+  {
+    id: 'vienna_zoo',
+    flag: '🇦🇹',
+    country: 'Austria',
+    name: 'Schönbrunn Zoo',
+    location: 'Vienna, Austria',
+    latitude: 48.1822,
+    longitude: 16.3025,
+    description:
+      'Schönbrunn Zoo in Vienna is one of the oldest zoos in the world and is located within the historic Schönbrunn Palace grounds. It combines imperial architecture, landscaped paths, and modern animal care in a setting that feels elegant and unique. The zoo is both a cultural and wildlife destination.\n\nFor big cat fans, the zoo offers a chance to see predators in a place where history and conservation meet. Its exhibits help explain how modern zoos have changed from simple displays into centers for education and species protection. The surrounding palace gardens also make the visit especially scenic and memorable.',
+    bigCats: ['Tiger', 'Lion', 'Cheetah', 'Leopard'],
+    openingHours: '9:00 AM – 6:30 PM',
+    image: require('../../assets/i/biigctsandbcfzoo20.png'),
+  },
+];
