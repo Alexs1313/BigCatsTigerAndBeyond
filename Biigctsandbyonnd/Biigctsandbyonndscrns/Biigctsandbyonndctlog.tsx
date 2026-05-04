@@ -667,24 +667,27 @@ const Biigctsandbyonndctlog = () => {
   const biigctsandbyonndctlogToggleFav = (biigctsandbyonndctlogId: string) => {
     setBiigctsandbyonndctlogFavIds(prev => {
       const biigctsandbyonndctlogWasFav = !!prev[biigctsandbyonndctlogId];
-      let biigctsandbyonndctlogNext: Record<string, true>;
+      const biigctsandbyonndctlogNext: Record<string, true> = {...prev};
       if (biigctsandbyonndctlogWasFav) {
-        biigctsandbyonndctlogNext = {...prev};
         delete biigctsandbyonndctlogNext[biigctsandbyonndctlogId];
       } else {
-        biigctsandbyonndctlogNext = {...prev, [biigctsandbyonndctlogId]: true};
+        biigctsandbyonndctlogNext[biigctsandbyonndctlogId] = true;
       }
-      biigctsandbyonndPrefsSaveFavCats(biigctsandbyonndctlogNext).catch(
-        () => {},
-      );
-      if (biigctsandbyonndNotifs) {
-        Toast.show({
-          type: 'success',
-          text1: biigctsandbyonndctlogWasFav
-            ? 'Card removed from favorites.'
-            : 'Card saved to favorites.',
-        });
-      }
+
+      queueMicrotask(() => {
+        biigctsandbyonndPrefsSaveFavCats(biigctsandbyonndctlogNext).catch(
+          () => {},
+        );
+        if (biigctsandbyonndNotifs) {
+          Toast.show({
+            type: 'success',
+            text1: biigctsandbyonndctlogWasFav
+              ? 'Card removed from favorites.'
+              : 'Card saved to favorites.',
+          });
+        }
+      });
+
       return biigctsandbyonndctlogNext;
     });
   };

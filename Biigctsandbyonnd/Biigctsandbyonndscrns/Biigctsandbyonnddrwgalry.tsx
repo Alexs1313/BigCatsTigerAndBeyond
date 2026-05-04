@@ -15,6 +15,7 @@ import {
   FlatList,
   Image,
   Modal,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -27,6 +28,7 @@ import {useSafeAreaInsets} from 'react-native-safe-area-context';
 import Toast from 'react-native-toast-message';
 
 import Biigctsandbyonndlay from '../Biigctsandbyonndcpnt/Biigctsandbyonndlay';
+import Orientation from 'react-native-orientation-locker';
 
 const Biigctsandbyonnddrwgalry = () => {
   const biigctsandbyonnddrwgalryNavigation = useNavigation();
@@ -79,6 +81,16 @@ const Biigctsandbyonnddrwgalry = () => {
       year: 'numeric',
     });
   };
+
+  useFocusEffect(
+    useCallback(() => {
+      Orientation.lockToPortrait();
+
+      return () => {
+        Orientation.unlockAllOrientations();
+      };
+    }, []),
+  );
 
   const biigctsandbyonnddrwgalryThumb = (
     row: BiigctsandbyonnddrwSavedSketch,
@@ -212,6 +224,7 @@ const Biigctsandbyonnddrwgalry = () => {
         <Modal
           visible={biigctsandbyonnddrwgalryView != null}
           transparent
+          statusBarTranslucent={Platform.OS === 'android'}
           animationType="fade"
           onRequestClose={() => setBiigctsandbyonnddrwgalryView(null)}>
           <View style={styles.biigctsandbyonnddrwgalryModalOuter}>

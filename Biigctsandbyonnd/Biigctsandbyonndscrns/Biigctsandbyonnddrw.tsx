@@ -211,17 +211,13 @@ const Biigctsandbyonnddrw = () => {
   };
 
   return (
-    <Biigctsandbyonndlay biigctsandbyonndlayScroll={false} bounce={false}>
+    <Biigctsandbyonndlay bounce={false}>
       <View
         style={[
           styles.biigctsandbyonnddrwPage,
           {paddingTop: biigctsandbyonnddrwInsets.top + 10},
         ]}>
-        <ScrollView
-          keyboardShouldPersistTaps="handled"
-          showsVerticalScrollIndicator={false}
-          style={styles.biigctsandbyonnddrwScrollTop}
-          contentContainerStyle={styles.biigctsandbyonnddrwScrollTopIn}>
+        <View style={styles.biigctsandbyonnddrwScrollTopIn}>
           <View style={styles.biigctsandbyonnddrwTopRow}>
             <View style={styles.biigctsandbyonnddrwTopRowText}>
               <Text style={styles.biigctsandbyonnddrwOver}>
@@ -305,7 +301,7 @@ const Biigctsandbyonnddrw = () => {
               </Text>
             </Pressable>
           </View>
-        </ScrollView>
+        </View>
 
         <View
           style={styles.biigctsandbyonnddrwCanvasWrap}
@@ -323,11 +319,7 @@ const Biigctsandbyonnddrw = () => {
           />
         </View>
 
-        <ScrollView
-          keyboardShouldPersistTaps="handled"
-          showsVerticalScrollIndicator={false}
-          style={styles.biigctsandbyonnddrwScrollBot}
-          contentContainerStyle={styles.biigctsandbyonnddrwScrollBotIn}>
+        <View style={styles.biigctsandbyonnddrwScrollBot}>
           <View
             style={{
               backgroundColor: '#1F0D0D',
@@ -427,7 +419,7 @@ const Biigctsandbyonnddrw = () => {
           </Pressable>
 
           <View style={styles.biigctsandbyonnddrwBottomSpacer} />
-        </ScrollView>
+        </View>
       </View>
 
       <Modal
@@ -558,6 +550,7 @@ const styles = StyleSheet.create({
   biigctsandbyonnddrwPage: {
     flex: 1,
     paddingHorizontal: 16,
+    paddingBottom: 110,
   },
   biigctsandbyonnddrwTopRowText: {
     flex: 1,
@@ -583,7 +576,7 @@ const styles = StyleSheet.create({
     flexShrink: 1,
   },
   biigctsandbyonnddrwScrollBotIn: {
-    paddingBottom: 100,
+    paddingBottom: 140,
   },
   biigctsandbyonnddrwTopRow: {
     flexDirection: 'row',
@@ -828,7 +821,7 @@ const styles = StyleSheet.create({
   biigctsandbyonnddrwModalTitle: {
     color: '#FFFFFF',
     fontFamily: 'Nunito-Bold',
-    fontSize: 18,
+    fontSize: 16,
     marginBottom: 6,
     textAlign: 'center',
     marginTop: 8,

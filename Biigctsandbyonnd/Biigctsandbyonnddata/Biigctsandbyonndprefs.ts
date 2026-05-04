@@ -14,11 +14,11 @@ export const biigctsandbyonndPrefsLoadNotifications =
         biigctsandbyonndPrefsKeys.notifications,
       );
       if (biigctsandbyonndPrefsRaw === null) {
-        return true;
+        return false;
       }
       return biigctsandbyonndPrefsRaw === '1';
     } catch {
-      return true;
+      return false;
     }
   };
 

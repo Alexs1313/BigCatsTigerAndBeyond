@@ -7,6 +7,7 @@ import React, {useCallback} from 'react';
 import {
   Image,
   Linking,
+  Platform,
   Pressable,
   ScrollView,
   StyleSheet,
@@ -114,27 +115,31 @@ const Biigctsandbyonndsttgs = () => {
             />
           </View>
           <View style={styles.biigctsandbyonndsttgsSep} />
-          <Pressable
-            onPress={() => {
-              biigctsandbyonndsttgsRate().catch(() => {});
-            }}
-            style={({pressed}) => [
-              styles.biigctsandbyonndsttgsRow,
-              pressed && styles.biigctsandbyonndsttgsRowPress,
-            ]}>
-            <View style={styles.biigctsandbyonndsttgsIconWrap}>
-              <Image source={require('../../assets/i/biigctsandberate.png')} />
-            </View>
-            <View style={styles.biigctsandbyonndsttgsRowMid}>
-              <Text style={styles.biigctsandbyonndsttgsRowTitle}>
-                Rate the App
-              </Text>
-              <Text style={styles.biigctsandbyonndsttgsRowSub}>
-                Love big cats? Share the love!
-              </Text>
-            </View>
-            <Image source={require('../../assets/i/biigctsandbenxt.png')} />
-          </Pressable>
+          {Platform.OS === 'ios' && (
+            <Pressable
+              onPress={() => {
+                biigctsandbyonndsttgsRate().catch(() => {});
+              }}
+              style={({pressed}) => [
+                styles.biigctsandbyonndsttgsRow,
+                pressed && styles.biigctsandbyonndsttgsRowPress,
+              ]}>
+              <View style={styles.biigctsandbyonndsttgsIconWrap}>
+                <Image
+                  source={require('../../assets/i/biigctsandberate.png')}
+                />
+              </View>
+              <View style={styles.biigctsandbyonndsttgsRowMid}>
+                <Text style={styles.biigctsandbyonndsttgsRowTitle}>
+                  Rate the App
+                </Text>
+                <Text style={styles.biigctsandbyonndsttgsRowSub}>
+                  Love big cats? Share the love!
+                </Text>
+              </View>
+              <Image source={require('../../assets/i/biigctsandbenxt.png')} />
+            </Pressable>
+          )}
         </View>
 
         <Text style={styles.biigctsandbyonndsttgsSection}>ABOUT</Text>
@@ -161,26 +166,30 @@ const Biigctsandbyonndsttgs = () => {
             <Image source={require('../../assets/i/biigctsandbenxt.png')} />
           </Pressable>
           <View style={styles.biigctsandbyonndsttgsSep} />
-          <Pressable
-            onPress={() =>
-              Linking.openURL(
-                'https://www.termsfeed.com/live/ce32064e-6d8c-4f02-b392-8abafe8f813e',
-              )
-            }
-            style={({pressed}) => [
-              styles.biigctsandbyonndsttgsRow,
-              pressed && styles.biigctsandbyonndsttgsRowPress,
-            ]}>
-            <View style={styles.biigctsandbyonndsttgsIconWrap}>
-              <Image source={require('../../assets/i/biigctsandbempriv.png')} />
-            </View>
-            <View style={styles.biigctsandbyonndsttgsRowMid}>
-              <Text style={styles.biigctsandbyonndsttgsRowTitle}>
-                Privacy Policy
-              </Text>
-            </View>
-            <Image source={require('../../assets/i/biigctsandbenxt.png')} />
-          </Pressable>
+          {Platform.OS === 'ios' ? (
+            <Pressable
+              onPress={() =>
+                Linking.openURL(
+                  'https://www.termsfeed.com/live/ce32064e-6d8c-4f02-b392-8abafe8f813e',
+                )
+              }
+              style={({pressed}) => [
+                styles.biigctsandbyonndsttgsRow,
+                pressed && styles.biigctsandbyonndsttgsRowPress,
+              ]}>
+              <View style={styles.biigctsandbyonndsttgsIconWrap}>
+                <Image
+                  source={require('../../assets/i/biigctsandbempriv.png')}
+                />
+              </View>
+              <View style={styles.biigctsandbyonndsttgsRowMid}>
+                <Text style={styles.biigctsandbyonndsttgsRowTitle}>
+                  Privacy Policy
+                </Text>
+              </View>
+              <Image source={require('../../assets/i/biigctsandbenxt.png')} />
+            </Pressable>
+          ) : null}
         </View>
 
         <Text style={styles.biigctsandbyonndsttgsSection}>DANGER ZONE</Text>

@@ -7,6 +7,7 @@ import React, {useCallback, useEffect, useMemo, useRef, useState} from 'react';
 import {
   FlatList,
   Image,
+  Platform,
   Pressable,
   StyleSheet,
   Text,
@@ -15,7 +16,7 @@ import {
 } from 'react-native';
 
 import LinearGradient from 'react-native-linear-gradient';
-import MapView, {Marker, PROVIDER_DEFAULT} from 'react-native-maps';
+import MapView, {Marker, PROVIDER_GOOGLE} from 'react-native-maps';
 
 import {
   useFocusEffect,
@@ -32,8 +33,7 @@ type BiigctsandbyonndzoosRouteParams = {
 const Biigctsandbyonndzoos = () => {
   const biigctsandbyonndzoosNavigation = useNavigation();
   const biigctsandbyonndzoosRoute = useRoute();
-  const biigctsandbyonndzoosMapRef =
-    useRef<React.ElementRef<typeof MapView>>(null);
+  const biigctsandbyonndzoosMapRef = useRef(null);
   const [biigctsandbyonndzoosQuery, setBiigctsandbyonndzoosQuery] =
     useState('');
   const [biigctsandbyonndzoosMode, setBiigctsandbyonndzoosMode] = useState<
@@ -80,24 +80,24 @@ const Biigctsandbyonndzoos = () => {
     }, [biigctsandbyonndzoosNavigation, biigctsandbyonndzoosRoute.params]),
   );
 
-  useEffect(() => {
-    if (biigctsandbyonndzoosMode !== 'map' || !biigctsandbyonndzoosSelected) {
-      return;
-    }
-    const {latitude, longitude} = biigctsandbyonndzoosSelected;
-    const biigctsandbyonndzoosT = setTimeout(() => {
-      biigctsandbyonndzoosMapRef.current?.animateToRegion(
-        {
-          latitude,
-          longitude,
-          latitudeDelta: 10,
-          longitudeDelta: 10,
-        },
-        400,
-      );
-    }, 120);
-    return () => clearTimeout(biigctsandbyonndzoosT);
-  }, [biigctsandbyonndzoosMode, biigctsandbyonndzoosSelected]);
+  // useEffect(() => {
+  //   if (biigctsandbyonndzoosMode !== 'map' || !biigctsandbyonndzoosSelected) {
+  //     return;
+  //   }
+  //   const {latitude, longitude} = biigctsandbyonndzoosSelected;
+  //   const biigctsandbyonndzoosT = setTimeout(() => {
+  //     biigctsandbyonndzoosMapRef.current?.animateToRegion(
+  //       {
+  //         latitude,
+  //         longitude,
+  //         latitudeDelta: 10,
+  //         longitudeDelta: 10,
+  //       },
+  //       400,
+  //     );
+  //   }, 120);
+  //   return () => clearTimeout(biigctsandbyonndzoosT);
+  // }, [biigctsandbyonndzoosMode, biigctsandbyonndzoosSelected]);
 
   const biigctsandbyonndzoosOpenDetails = (zoo: BiigctsandbyonndZoo) => {
     (biigctsandbyonndzoosNavigation as any).navigate('Biigctsandbyonndzoodet', {
@@ -115,7 +115,7 @@ const Biigctsandbyonndzoos = () => {
         <View style={styles.biigctsandbyonndzoosCardHero}>
           <View>
             <Image
-              source={item.image}
+              source={item.image ?? undefined}
               style={styles.biigctsandbyonndzoosHeroImg}
             />
 
@@ -245,29 +245,54 @@ const Biigctsandbyonndzoos = () => {
             <View style={styles.biigctsandbyonndzoosMapWrap}>
               <MapView
                 ref={biigctsandbyonndzoosMapRef}
-                provider={PROVIDER_DEFAULT}
                 style={styles.biigctsandbyonndzoosMap}
                 initialRegion={{
-                  latitude: biigctsandbyonndzoosSelected?.latitude ?? 20,
-                  longitude: biigctsandbyonndzoosSelected?.longitude ?? 0,
-                  latitudeDelta: 120,
-                  longitudeDelta: 120,
+                  latitude: Number(
+                    biigctsandbyonndzoosSelected?.latitude ?? 20,
+                  ),
+                  longitude: Number(
+                    biigctsandbyonndzoosSelected?.longitude ?? 0,
+                  ),
+                  latitudeDelta: 60,
+                  longitudeDelta: 60,
                 }}>
-                {biigctsandbyonndzoosFiltered.map(z => (
-                  <Marker
-                    key={z.id}
-                    coordinate={{latitude: z.latitude, longitude: z.longitude}}
-                    onPress={() => setBiigctsandbyonndzoosSelected(z)}>
-                    <Image
-                      source={require('../../assets/i/biigctsandbcfznemarkr.png')}
-                      style={
-                        z.id === biigctsandbyonndzoosSelected?.id
-                          ? {width: 36, height: 36}
-                          : {width: 28, height: 28}
-                      }
-                    />
-                  </Marker>
-                ))}
+                {biigctsandbyonndzoosFiltered
+                  .filter(
+                    z =>
+                      Number.isFinite(Number(z.latitude)) &&
+                      Number.isFinite(Number(z.longitude)),
+                  )
+                  .map(z =>
+                    Platform.OS === 'ios' ? (
+                      <Marker
+                        key={z.id}
+                        coordinate={{
+                          latitude: Number(z.latitude),
+                          longitude: Number(z.longitude),
+                        }}
+                        onPress={() => setBiigctsandbyonndzoosSelected(z)}>
+                        <Image
+                          source={require('../../assets/i/biigctsandbcfznemarkr.png')}
+                          style={
+                            z.id === biigctsandbyonndzoosSelected?.id
+                              ? {width: 36, height: 36}
+                              : {width: 28, height: 28}
+                          }
+                        />
+                      </Marker>
+                    ) : (
+                      <Marker
+                        key={z.id}
+                        coordinate={{
+                          latitude: Number(z.latitude),
+                          longitude: Number(z.longitude),
+                        }}
+                        title={z.name}
+                        description={z.location}
+                        onPress={() => setBiigctsandbyonndzoosSelected(z)}
+                      />
+                    ),
+                  )}
               </MapView>
             </View>
             {biigctsandbyonndzoosSelected ? (
