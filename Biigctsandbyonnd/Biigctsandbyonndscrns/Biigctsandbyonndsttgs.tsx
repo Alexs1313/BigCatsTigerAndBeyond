@@ -27,7 +27,7 @@ import {
 } from '../Biigctsandbyonnddata/Biigctsandbyonndprefs';
 
 const biigctsandbyonndsttgsRateUrl =
-  'https://apps.apple.com/us/app/tiger-big-cats/id6766214879';
+  'https://apps.apple.com/us/app/t%D1%96ger-b%D1%96g-cats/id6766299368';
 
 const Biigctsandbyonndsttgs = () => {
   const biigctsandbyonndsttgsNavigation = useNavigation();
