@@ -1,20 +1,20 @@
 workflows:
   ios-workflow:
-    name: 'Tiger: Big Cats'
+    name: 'Tigre Cats Beyond'
     max_build_duration: 120
     instance_type: mac_mini_m2
     integrations:
-      app_store_connect: CatsBeyondAPIKey
+      app_store_connect: CLIMJUNAIDAPIKey
     environment:
       xcode: '26.0'
       ios_signing:
         distribution_type: app_store
-        bundle_identifier: com.ghryeee.hjhffs
+        bundle_identifier: com.hjuurpqn.gkut.jfld
       vars:
-        BUNDLE_ID: com.ghryeee.hjhffs
+        BUNDLE_ID: com.hjuurpqn.gkut.jfld
         XCODE_WORKSPACE: BigCatsTigerAndBeyond.xcworkspace
         XCODE_SCHEME: BigCatsTigerAndBeyond
-        APP_STORE_APPLE_ID: 6766299368
+        APP_STORE_APPLE_ID: 6766627702
     scripts:
       - name: Install npm dependencies
         script: |

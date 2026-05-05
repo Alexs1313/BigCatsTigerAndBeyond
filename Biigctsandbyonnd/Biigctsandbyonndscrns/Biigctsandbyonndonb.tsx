@@ -42,7 +42,7 @@ const Biigctsandbyonndonb = () => {
       {
         id: 'draw',
         badge: '🗺️ Plan your wildlife adventure',
-        title: 'Visit Amazing Zoos',
+        title: 'Visit Different Zoos',
         description:
           'Find the best zoos and wildlife parks worldwide to see big cats up close. Browse detailed info and build your route.',
         image: require('../../assets/i/biigctsandbyonlon2.png'),

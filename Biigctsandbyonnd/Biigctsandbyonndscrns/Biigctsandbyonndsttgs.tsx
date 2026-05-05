@@ -27,7 +27,7 @@ import {
 } from '../Biigctsandbyonnddata/Biigctsandbyonndprefs';
 
 const biigctsandbyonndsttgsRateUrl =
-  'https://apps.apple.com/us/app/t%D1%96ger-b%D1%96g-cats/id6766299368';
+  'https://apps.apple.com/us/app/tigre-cats-beyond/id6766627702';
 
 const Biigctsandbyonndsttgs = () => {
   const biigctsandbyonndsttgsNavigation = useNavigation();
@@ -170,7 +170,7 @@ const Biigctsandbyonndsttgs = () => {
             <Pressable
               onPress={() =>
                 Linking.openURL(
-                  'https://www.termsfeed.com/live/ce32064e-6d8c-4f02-b392-8abafe8f813e',
+                  'https://www.termsfeed.com/live/916db87c-3bae-41e0-8ef7-701a231f3806',
                 )
               }
               style={({pressed}) => [
